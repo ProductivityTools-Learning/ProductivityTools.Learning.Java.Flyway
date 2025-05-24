@@ -1,5 +1,7 @@
 # DB migrations with Spring, Gradle, FlyWay
 
+The spring2 directory is the best one
+
 Go to [spring initializr](https://start.spring.io/) chose:
 - Gradle - Grovy
 - Java
@@ -109,7 +111,7 @@ Validate databases again.
 [I used tutorial](https://medium.com/@ekaterina_kazakova/spring-boot-application-with-postgresql-database-inside-along-with-flyway-for-migration-and-fb9513fe7cfb)
 
 ----------------
-
+Some old tutorial:
 ## Install 
 - Gradle extension
 - Extension Pack for Java
