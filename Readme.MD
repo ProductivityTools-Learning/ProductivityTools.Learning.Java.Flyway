@@ -59,9 +59,46 @@ public class FlyWayConfiguration {
 
 Probably default test will start failing, comment it.
 
-In the resources directory open application properties
+In the resources directory open application properties. Add the content (notice that there is no ' or "):
+```java
+spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username=postgres
+spring.datasource.password=Pawel123
+spring.datasource.driver-class-name=org.postgresql.Driver
 
+logging.level.org.springframework.security=DEBUG
+logging.level.org.flywaydb=DEBUG
+```
+In the directory ```resources/db/migration``` craete fle ```V1__Initial.sql```. Fill with the content:
 
+```
+CREATE TABLE IF NOT EXISTS product
+(
+    id                    SERIAL PRIMARY KEY,
+    brand                 VARCHAR(255)      NOT NULL,
+    category              VARCHAR(255)      NOT NULL,
+    name                  VARCHAR(255)      NOT NULL,
+    flavour               VARCHAR(255)      NULL,
+    calories_per_100_gram NUMERIC(5, 1)     NOT NULL,
+    weight_gram           NUMERIC(5, 1)     NOT NULL
+);
+
+```
+![](Images/20250524121439.png)
+
+Open **pgAdmin** and validate if database is empty:
+```
+SELECT table_schema, table_name, table_type
+FROM information_schema.tables
+WHERE table_schema = 'public' 
+  AND table_type = 'BASE TABLE'
+ORDER BY table_schema, table_name;
+```
+
+Run ```.\gradlew.bat bootrun``` scripts should be executed. 
+Validate databases again. 
+
+![](Images/20250524163006.png)
 
 
 
