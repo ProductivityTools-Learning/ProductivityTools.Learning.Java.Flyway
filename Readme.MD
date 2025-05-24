@@ -106,9 +106,7 @@ Validate databases again.
 
 
 
-
-
-https://medium.com/@ekaterina_kazakova/spring-boot-application-with-postgresql-database-inside-along-with-flyway-for-migration-and-fb9513fe7cfb
+[I used tutorial](https://medium.com/@ekaterina_kazakova/spring-boot-application-with-postgresql-database-inside-along-with-flyway-for-migration-and-fb9513fe7cfb)
 
 ----------------
 
